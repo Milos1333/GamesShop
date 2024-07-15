@@ -1,0 +1,178 @@
+.navigation {
+  width: 100%;
+  background-color: rgba(0, 0, 52, 0.63);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 8px 30px;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 100;
+  height: 7vh;
+}
+
+.logo-container {
+  width: 20%;
+}
+
+.logo-container a {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.logo-container img {
+  cursor: pointer;
+}
+
+.nav-links {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 10%;
+}
+
+.nav-links a:hover {
+  color: rgb(200, 200, 200);
+}
+
+.nav-links .active-link:hover {
+  color: rgb(255, 255, 255) !important;
+}
+
+.nav-links .active-link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(255, 0, 102);
+  position: absolute;
+  top: 31.5px;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-icons {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+}
+
+.nav-icons > img:last-child {
+  display: none;
+}
+
+.nav-icons img {
+  cursor: pointer;
+}
+
+.shopping-basket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.shopping-basket span {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  background-color: rgb(255, 0, 102);
+  padding: 5px;
+  font-size: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 10px;
+  left: 10px;
+  color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .navigation {
+    padding: 7px 20px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .nav-icons img {
+    width: 14px;
+  }
+
+  .shopping-basket img {
+    width: 18px !important;
+  }
+
+  .nav-icons {
+    gap: 15px;
+  }
+
+  .logo-container img {
+    width: 25px;
+  }
+
+  .nav-links .active-link::after {
+    top: 30.5px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .logo-container {
+    width: 15%;
+  }
+
+  .nav-icons {
+    width: 15%;
+  }
+
+  .nav-links {
+    width: 70%;
+  }
+
+  .shopping-basket span {
+    width: 3px;
+    height: 3px;
+    top: 8px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-icons > img:first-child,
+  .nav-icons > img:nth-child(3) {
+    display: none;
+  }
+
+  .nav-icons > img:last-child {
+    display: flex;
+  }
+
+  .nav-icons {
+    gap: 20px;
+  }
+
+  .nav-icons img {
+    width: 14px;
+  }
+}

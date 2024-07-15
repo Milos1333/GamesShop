@@ -1,0 +1,182 @@
+.drawer-menu {
+  display: none;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .drawer-menu-open {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 200px;
+    top: 7vh;
+    right: 0;
+    background-color: rgba(0, 0, 52, 0.63);
+    animation: slideLeft 0.3s forwards;
+  }
+
+  .drawer-menu-close {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 200px;
+    top: 7vh;
+    right: 0;
+    background-color: rgba(0, 0, 52, 0.336);
+    animation: slideRight 0.3s forwards;
+  }
+
+  .drawer-menu-search {
+    width: 100%;
+    height: 25px;
+    margin: 20px 0 20px 0;
+    display: flex;
+    position: relative;
+    border-radius: 50px;
+  }
+
+  .drawer-menu-search img {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    cursor: pointer;
+  }
+
+  .drawer-menu-search input {
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding-right: 30px;
+    padding-left: 10px;
+    background-color: transparent;
+    color: white;
+    border: 0.5px solid white;
+    font-size: 11px;
+  }
+
+  .user-drawer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: white;
+    padding: 20px 0px;
+    box-sizing: border-box;
+    justify-content: space-between;
+  }
+
+  .user-information-drawer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .drawer-menu-open hr {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 0.7px;
+    background-color: white;
+  }
+
+  .user-information-drawer h4,
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .user-information-drawer h4,
+  p {
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .user-information-drawer h4:hover,
+  .user-information-drawer p:hover {
+    color: rgb(200, 200, 200);
+  }
+
+  .user-information-drawer p {
+    font-size: 12px;
+  }
+
+  .user-drawer img {
+    cursor: pointer;
+  }
+
+  .nav-links-drawer {
+    width: 100%;
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  .nav-links-drawer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links-drawer ul li {
+    list-style: none;
+    width: 100%;
+    padding: 5px 0;
+    display: flex;
+    justify-content: end;
+    box-sizing: border-box;
+  }
+
+  .nav-links-drawer ul li a:hover {
+    color: rgb(200, 200, 200) !important;
+  }
+
+  .nav-links-drawer .active-link-drawer a {
+    color: rgb(255, 0, 102);
+  }
+
+  .nav-links-drawer .active-link-drawer a:hover {
+    color: rgb(255, 0, 102) !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .nav-links-drawer ul li a {
+    font-size: 12px;
+  }
+
+  .user-information-drawer h4 {
+    font-size: 12px;
+  }
+
+  .user-information-drawer p {
+    font-size: 11px;
+  }
+}
